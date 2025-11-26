@@ -1,0 +1,177 @@
+/* --- ESTILOS BASE --- */
+html, body {
+    margin: 0;       /* Elimina el margen por defecto */
+    padding: 0;      /* Elimina el padding por defecto */
+    width: 100%;     /* Asegura el 100% de ancho */
+    overflow-x: hidden; /* Evita que la barra horizontal aparezca si algo se desborda */
+}
+
+.product-showcase {
+    background-color: #000000;
+    padding: 60px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.product-card {
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    
+    /* === FLEXBOX CLAVE: Video y Texto al lado === */
+    display: flex;
+    gap: 40px;
+    align-items: flex-start; /* Alinea los elementos a la parte superior */
+}
+
+/* === MEDIA Y VIDEO === */
+.product-media {
+    flex: 1; /* Ocupa la mitad del espacio disponible */
+    min-width: 0; /* Necesario para que el video se ajuste */
+}
+
+.product-video {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+/* === DETALLES Y TEXTO === */
+.product-details {
+    flex: 1; /* Ocupa la otra mitad del espacio disponible */
+    padding-top: 5px;
+}
+.product-details img {
+    width: 50%; /* O el valor que prefieras */
+    height: auto;
+    display: block; /* Necesario para que margin: auto funcione */
+    margin: 0 auto; /* Centra la imagen */
+    object-fit: contain;
+}
+.product-title {
+    font-size:3rem;
+    color: rgb(255, 196, 0);
+    margin-bottom: 10px;
+}
+
+.product-description {
+    font-size: 1rem;
+    color: #ffffff;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.product-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.product-price span {
+    color: rgb(255, 196, 0);
+}
+
+
+.contact-button {
+    display: inline-block;
+    background-color: #25d366; 
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+    background-color: #128c7e;
+}
+
+.fotos_p {
+    
+    background-color:#1a1a1a;     
+    border-radius: 8px;           
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+    padding: 20px;                
+    margin: 40px auto 0 auto; 
+    max-width: 1100px; 
+    display: flex;       
+    flex-direction: column; 
+    gap: 15px; 
+    align-items: center; 
+}
+
+
+.fotos-fila {
+    display: flex;       
+    flex-direction: row; 
+    flex-wrap: wrap;     
+    gap: 15px;           
+    justify-content: center; 
+    width: 100%; 
+}
+
+/*  TÍTULO */
+.galeria-peugeot {
+    font-size: 2.5rem;
+    color: rgb(255, 196, 0);
+    margin: 0;
+    padding: 20px 20px;
+    width: 100%; 
+    text-align: left; 
+}
+
+.fotos-fila img { 
+    flex-basis: calc(25% - 15px); 
+    flex-grow: 0;   
+    flex-shrink: 1; 
+    height: 180px; 
+    width: 100%; 
+    object-fit: cover; 
+    border-radius: 4px;
+}
+
+/* =================================================== */
+/* MEDIA QUERY: Estilos para Móviles (ej. max-width: 768px) */
+/* =================================================== */
+@media (max-width: 768px) {
+    /* --- AJUSTES GENERALES DEL CONTENEDOR DE LA GALERÍA (.fotos_p) --- */
+    .fotos_p {
+        /* Reducimos el margen superior y el padding interno en móvil */
+        margin-top: 20px; 
+        padding: 15px; 
+    }
+
+    /* Ajustamos el título */
+    .galeria-peugeot {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    
+    /* --- AJUSTES DE LA FILA DE IMÁGENES (.fotos-fila) --- */
+    .fotos-fila {
+        /* Mantenemos el display flex en fila */
+        gap: 10px; /* Reducimos el gap para que quepan mejor */
+    }
+
+    /* --- AJUSTES DE IMÁGENES INDIVIDUALES (.fotos-fila img) --- */
+    .fotos-fila img {
+        /* Mostramos 2 imágenes por fila en móvil */
+        flex-basis: calc(50% - 10px); /* Ajustamos para 2 columnas (50% - gap) */
+        
+        /* Reducimos la altura para que no ocupe tanto espacio verticalmente */
+        height: 120px; 
+    }
+    
+
+    .product-card {
+        flex-direction: column; 
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    
+}
