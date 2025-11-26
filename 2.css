@@ -608,20 +608,20 @@ video{
     display: flex;
     flex-direction: column;
 }
-.modal2-content h2{
+.modal1-content h2{
     font-size: 2rem;
     color: #ffd043;
     text-align: center;
     padding: 20px 20px;
 }
-.modal2-content p{
+.modal1-content p{
     text-align: center;
 }
-.modal2-content span{
+.modal1-content span{
     color: #ffd043;
 }
 
-.modal2-content h3{
+.modal1-content h3{
     font-size: 2rem;
     color: #ffd043;
     text-align: center;
@@ -1252,3 +1252,4 @@ video{
     }
 
 }
+
